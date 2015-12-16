@@ -21,30 +21,27 @@
                 <div id="h-center">
                     <h3>Request a quote!</h3>
                 </div>
-                <form action="MAILTO:quote@mdafreight.org" method="post" enctype="text/plain">
-                    Your Name:
-                    <p>
-                        <input class="form" type="text" name="name">
-                    </p>
-                    E-mail:</p>
-                    <p>
-                        <input type="text" name="mail">
-                    </p>
-                    Pick Up Zip Code:</p>
-                    <p>
-                        <input type="text" name="pickup">
-                    </p>
-                    Delivery Zip Code:</p>
-                    <p>
-                        <input type="text" name="delivery">
-                    </p>
-                    <p>
-                        <div class="button-index"><button>
-                            <input type="submit" value="Send">
-                        </button></div>
-                        <input type="reset" value="Reset">
-                    </p>
-                </form>
+
+                <!-- FORM ADDED HERE -->
+                <%= form_tag("mdaform", :method => "POST") do %>
+                <%= label_tag('name', "Your Name:") %>
+                <%= text_field_tag('name') %>
+                <br>
+                <%= label_tag('email', "Email:") %>
+                <br>
+                <%= text_field_tag('email') %>
+                <br>
+                <%= label_tag('pickupzip', "Pick Up Zip Code:") %>
+                <br>
+                <%= text_field_tag('pickupzip') %>
+                <br>
+                <%= label_tag('deliveryzip', "Delivery Zip Code:") %>
+                <br>
+                <%= text_field_tag('deliveryzip') %>
+                <br>
+                <%= submit_tag("Submit") %>
+                <% end %>
+
             </div>
         </div>
     </div>

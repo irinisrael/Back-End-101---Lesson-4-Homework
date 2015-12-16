@@ -10,6 +10,8 @@ Rails.application.routes.draw do
   get 'employment' => 'home#employment'
   get 'about' => 'home#about'
 
+  post 'mdaform' => 'home#mdaform_reply'
+
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
 
